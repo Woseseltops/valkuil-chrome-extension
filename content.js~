@@ -1,0 +1,4 @@
+chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+    alert('INSIDE');
+    sendResponse({data: window.getSelection().toString()});
+});

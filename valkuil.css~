@@ -1,0 +1,43 @@
+body
+{
+	background: #cecfb1;
+	font-family: Verdana;
+	font-size: 12px;
+}
+
+#suggestionarea
+{
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	background: white;
+	width: 300px;
+	text-align: center;
+	height: 115px;
+}
+
+#error
+{
+	background: #ffdfdf;
+	color: #f74d4d;
+	margin-bottom: 0px;
+	font-weight: bold;
+	padding:10px;
+}
+
+#suggestions
+{
+	margin: 0px;
+	list-style-type: none;
+	background: #9defb6;
+	cursor: pointer;
+	padding:10px;
+}
+
+#head
+{
+	font-size: 12px;
+	font-weight: bold;
+	color: #525347;
+	padding: 5px;
+}

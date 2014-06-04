@@ -1,0 +1,31 @@
+document.addEventListener('DOMContentLoaded', function () 
+{
+   var bg = chrome.extension.getBackgroundPage();
+   var seltext = bg.seltext;
+
+   $('#content').html('<img src="loader.png">');
+   //$('#suggestionarea"').hide();
+
+   $.ajax(
+   {
+       url:"http://cls.ru.nl/staff/wstoop/correct.php?txt="+seltext, 
+       type:"get",
+       success: function(data,status) 
+       {
+           $('#content').html('<xmp>'+data+'</xmp>');
+		   data = jQuery.parseJSON(data);
+           $('#error_sentence').html(data[0].original);
+           $('#suggestions').html(data[0].correction);
+           $('#suggestionarea').show();
+           $('#content').hide();
+       },
+       timeout: 10000
+   });
+
+});
+
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+});

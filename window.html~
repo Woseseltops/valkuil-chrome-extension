@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="jquery.min.js"></script>
+    <script src="popup.js"></script>
+    <link rel="stylesheet" href="valkuil.css" type="text/css" />
+  </head>
+  <body>
+    <p id="content"></p>
+    <div id="suggestionarea">
+		<div id="head">suggestie(s) voor:</div> 
+		<div id="error_sentence"></div>
+		<div id="suggestions"></div>
+	</div>
+  </body>
+</html>
