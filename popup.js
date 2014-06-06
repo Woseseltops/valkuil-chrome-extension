@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function ()
 	rotation();
 
    $('#suggestionarea').hide();
+   $('#noerrors').hide();
    $('#pager').hide();
 
 	function update_view() 
@@ -42,12 +43,21 @@ document.addEventListener('DOMContentLoaded', function ()
        success: function(data,status) 
        {
            $('#loader').html('<xmp>'+data+'</xmp>');
-		   data = jQuery.parseJSON(data);
-		   results = data;
-           $('#suggestionarea').show();
-		   $('#pager').show();
+	   data = jQuery.parseJSON(data);
+	   results = data;
+           
+           if(results.length > 0)
+           {
+               $('#suggestionarea').show();
+	   }
+           else
+           { 
+              $('#noerrors').show();
+           }
+ 
+           $('#pager').show();
            $('#loader').hide();
-			update_view();
+	   update_view();
        },
        timeout: 10000
    });
@@ -78,5 +88,3 @@ $(document).ready(function(){
     $(this).hide();
   });
 });
-
-//TODO: Middenvakje van de pager, je mag niet onder nul gaan met de fout die je bekijkt

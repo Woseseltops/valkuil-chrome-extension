@@ -18,7 +18,7 @@ body
 	margin-right: auto;
 }
 
-#suggestionarea
+#suggestionarea, #noerrors
 {
 	border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -28,6 +28,11 @@ body
 	text-align: center;
 	height: 115px;
 	margin: auto;
+}
+
+#noerrors
+{
+	padding-top: 15px;
 }
 
 #error_sentence
