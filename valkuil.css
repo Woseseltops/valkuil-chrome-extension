@@ -27,6 +27,7 @@ body
 	width: 300px;
 	text-align: center;
 	height: 115px;
+	margin: auto;
 }
 
 #error_sentence
