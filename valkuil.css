@@ -114,3 +114,18 @@ body
 	-webkit-border-top-right-radius: 10px;
 	-webkit-border-bottom-right-radius: 10px;
 }
+
+a:link, a:visited, a:hover, a:active
+{
+	color: #444
+}
+
+#footer
+{
+	position: absolute;
+	text-align: center;
+	width: 150px;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -75px;
+}
